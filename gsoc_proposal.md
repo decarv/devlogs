@@ -42,6 +42,8 @@ The idea here is to acurately measure resource utilisation for pgagroal in areas
 
 This will enable the identification of bottlenecks and places where pgagroal can benefit from optimizations while being able to measure potential optimizations implementations. 
 
+The specific benchmark criteria (performance metrics) should be discussed with the community prior to the development of the strategy.
+
 Second, I propose diving deeper into improvements that could be made to the simple ev implementation of the previous phase, here I intend to investigate the potential necessary changes of structure of the main code, considering (a) the usage of io\_uring, (b) the different configurations for epoll (e.g. edge vs. level trigger), (c) cache performance, (d) optimizations with memory layout, (e) reducing system calls, (f) vectorization of read and writes.
 
 The tests and the profiling should lead the development after each commit.
